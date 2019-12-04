@@ -6,10 +6,11 @@ SystemEditor::SystemEditor()
 
 void SystemEditor::createNewProduct()
 {
+	float price;
 	std::string productname = ui.Question("Enter the name of the product: ");
 	std::string de = ui.Question("Enter a small description of the product: ");
 	ui.Question("Enter the price: ");
-	float price = ui.GetKeypressFromUser();
+	std::cin >> price;
 	std::string type = ui.Question("Enter the product type: ");
 	std::string cat = ui.Question("Enter the product catagory: ");
 	int id = pos->returnProductList().length()+2;
@@ -18,6 +19,24 @@ void SystemEditor::createNewProduct()
 	
 	pos->returnProductList().addInFront(newproduct);
 	
+}
+
+void SystemEditor::RunDemoVersion()
+{
+	//run seeding functions 
+	SeedDefaultProducts();
+	SeedDefaultAccounts();
+}
+
+void SystemEditor::SeedDefaultAccounts()
+{
+	User* user1 = new User("DefaultUserOne", "password", "userone");
+	User* user2 = new User("DefaultUserTwo", "password", "usertwo");
+	User* user3 = new User("DefaultUserThree", "password", "userthree");
+
+	app->AddNewUser(user1);
+	app->AddNewUser(user2);
+	app->AddNewUser(user3);
 }
 
 void SystemEditor::SeedDefaultProducts()

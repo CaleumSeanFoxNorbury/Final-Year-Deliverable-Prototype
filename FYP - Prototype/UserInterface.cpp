@@ -1,5 +1,6 @@
 #include "UserInterface.h"
 
+POS* pos;
 
 void UserInterface::GettingUser(std::string& username)
 {
@@ -68,12 +69,12 @@ std::string UserInterface::Question(const std::string& question)
 	return ut.Getlinefromuser();
 }
 
-void UserInterface::displayProduct(List<Product*> product)
+void UserInterface::displayProduct()
 {
-	for (int i(0); i < product.length(); i++) {
+	for (int i(0); i < pos->returnProductList().length(); i++) {
 		for (int row(0); row < 4; row++) {
-			//std::cout << product->getProduct(i)->getProductName();
-			std::cout << "  ";
+			std::cout << pos->getProduct(i)->getProductName();
+			std::cout << "";
 			row++;
 		}
 		std::cout << std::endl;

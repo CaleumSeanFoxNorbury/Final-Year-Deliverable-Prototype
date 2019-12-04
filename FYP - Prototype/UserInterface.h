@@ -3,6 +3,7 @@
 #include"Utils.h"
 #include"List.h"
 #include"Product.h"
+#include"POS.h"
 
 #include<iostream>
 #include<conio.h>
@@ -22,7 +23,7 @@ public:
 	void Option(int, const std::string&);
 	std::string Question(const std::string&);
 
-	void displayProduct(List<Product*>);
+	void displayProduct();
 
 private:
 	Application app;

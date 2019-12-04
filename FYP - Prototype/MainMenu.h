@@ -1,7 +1,6 @@
 #pragma once
 #include<string>
 
-#include"UserInterface.h"
 #include"Menu.h"
 #include"Application.h"
 
@@ -10,4 +9,6 @@ public:
 	MainMenu(const std::string&, Application*);
 	void OutputMenuOptions() final;
 	bool HandleMenuOption(char) final;
+private:
+	//User
 };

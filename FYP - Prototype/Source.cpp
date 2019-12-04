@@ -5,12 +5,15 @@
 #include"MainMenu.h"
 #include"Application.h"
 #include"LoginMenu.h"
+#include"SystemEditor.h"
 
 using namespace std;
 
+UserInterface ui;
+Application app = Application();
+SystemEditor* editor;
+
 int main() {
-	UserInterface ui;
-	Application app;
 	int Option;
 
 	std::string name = "defaultuser", password = "password", username = "DefaultUsername01";
@@ -26,13 +29,12 @@ int main() {
 	if (Option == 1) {
 		//login
 		LoginMenu("LoginMenu", &app);
-		MainMenu("MainMenu", &app);
 	}else if(Option == 2) {
 		//create account
 	
 	}else if (Option == 3) {
 		//demo user 
-
+		editor->RunDemoVersion();
 		MainMenu("MainMenu", &app);
 	}
 	return(0);
