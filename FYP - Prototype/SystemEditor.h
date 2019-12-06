@@ -12,14 +12,14 @@ public:
 	SystemEditor();
 
 	void createNewProduct();
-	void editProduct(int);
-	void deleteProduct();
+	void editProduct(int);//in final version
+	void deleteProduct();//in final version
 
 	void RunDemoVersion();
 	void SeedDefaultAccounts();
 	void SeedDefaultProducts();
 private:
 	UserInterface ui;
-	POS* pos;
+	POS* pos = new POS();
 	Application* app = new Application();
 };

@@ -6,6 +6,8 @@ SystemEditor::SystemEditor()
 
 void SystemEditor::createNewProduct()
 {
+	POS* pos = new POS(); //test
+
 	float price;
 	std::string productname = ui.Question("Enter the name of the product: ");
 	std::string de = ui.Question("Enter a small description of the product: ");
@@ -13,12 +15,12 @@ void SystemEditor::createNewProduct()
 	std::cin >> price;
 	std::string type = ui.Question("Enter the product type: ");
 	std::string cat = ui.Question("Enter the product catagory: ");
-	int id = pos->returnProductList().length()+2;
+	int id = pos->returnProductList()->size()+2;
 	
 	Product* newproduct = new Product(id, productname, de, price, type, cat);
 	
-	pos->returnProductList().addInFront(newproduct);
-	
+	pos->returnProductList()->push_back(newproduct);
+
 }
 
 void SystemEditor::RunDemoVersion()
@@ -41,6 +43,8 @@ void SystemEditor::SeedDefaultAccounts()
 
 void SystemEditor::SeedDefaultProducts()
 {
+	//POS* pos = new POS();
+
 	int id = 1;
 	std::string name = "KossiKuttan(curry)";
 	std::string description = "Coconut and chicken based curry";
@@ -63,9 +67,9 @@ void SystemEditor::SeedDefaultProducts()
 	std::string cat3 = "Sides";
 
 	Product* defaultOne = new Product(id, name, description, price, type, cat);
-	pos->returnProductList().addInFront(defaultOne);
-	Product* defaultTwo = new Product(id2, name2, description2, price2, type2, cat2);
-	pos->returnProductList().addInFront(defaultTwo);
+	pos->returnProductList()->push_back(defaultOne);
 	Product* defaultThree = new Product(id3, name3, description3, price3, type3, cat3);
-	pos->returnProductList().addInFront(defaultThree);
+	pos->returnProductList()->push_back(defaultThree);
+	Product* defaultTwo = new Product(id2, name2, description2, price2, type2, cat2);
+	pos->addNewProduct(defaultTwo);
 }

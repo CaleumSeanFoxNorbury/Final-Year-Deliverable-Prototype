@@ -75,6 +75,9 @@
     <ClCompile Include="POS_Menu.cpp">
       <Filter>Source Files\Menu</Filter>
     </ClCompile>
+    <ClCompile Include="CreateUserMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
@@ -111,6 +114,9 @@
       <Filter>Header Files\Objects</Filter>
     </ClInclude>
     <ClInclude Include="POS_Menu.h">
+      <Filter>Header Files\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateUserMenu.h">
       <Filter>Header Files\Menu</Filter>
     </ClInclude>
   </ItemGroup>

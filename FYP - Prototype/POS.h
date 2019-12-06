@@ -1,20 +1,20 @@
 #pragma once
 #include"List.h"
 #include"Product.h"
-
 #include <vector>
 
 class POS {
 public:
 	POS();
+	~POS();
 
 	Product* getProduct(int) const;
-	//void deleteProduct(Product*);
-
-	List<Product*> returnProductList();
-	List<Product*> returnBasket();
+	//void deleteProduct(Product*); in final version
+	void addNewProduct(Product *&);
+	std::vector<Product*>* returnProductList();
+	//List<Product*> returnBasket();
 private:
-	List<Product*> products; 
-	List<Product*> basket;
-	//List<Transaction*> transaction;
+	std::vector<Product*>* products = new std::vector<Product*>(); 
+	//List<Product*> basket;
+	//List<Transaction*> transaction; 
 };

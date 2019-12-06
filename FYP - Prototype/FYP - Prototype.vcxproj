@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="CreateUserMenu.cpp" />
     <ClCompile Include="LoginMenu.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="Menu.cpp" />
@@ -138,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="CreateUserMenu.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="LoginMenu.h" />
     <ClInclude Include="MainMenu.h" />

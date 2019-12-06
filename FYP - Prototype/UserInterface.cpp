@@ -71,7 +71,7 @@ std::string UserInterface::Question(const std::string& question)
 
 void UserInterface::displayProduct()
 {
-	for (int i(0); i < pos->returnProductList().length(); i++) {
+	for (int i(0); i < pos->returnProductList()->size(); i++) {
 		for (int row(0); row < 4; row++) {
 			std::cout << pos->getProduct(i)->getProductName();
 			std::cout << "";

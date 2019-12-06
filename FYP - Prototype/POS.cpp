@@ -4,17 +4,22 @@ POS::POS()
 {
 }
 
-Product* POS::getProduct(int index) const
+POS::~POS()
 {
-	return products[index];
 }
 
-List<Product*> POS::returnProductList()
+Product* POS::getProduct(int index) const
+{
+	return products->operator[](index);
+}
+
+void POS::addNewProduct(Product *& product)
+{
+	products->push_back(product);
+}
+
+std::vector<Product*>* POS::returnProductList()
 {
 	return products;
 }
 
-List<Product*> POS::returnBasket()
-{
-	return basket;
-}

@@ -20,11 +20,9 @@ void Application::Load(Application& app)
 		while (std::getline(infile, line)) {
 			if (line == "User") {
 				std::string Name;
-				std::string Score;
 				std::string username;
 				std::string password;
 				std::getline(infile, Name);
-				std::getline(infile, Score);
 				std::getline(infile, username);
 				std::getline(infile, password);
 				app.GetUsers().addInFront(new User(Name, password, username));
